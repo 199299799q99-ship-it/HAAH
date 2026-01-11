@@ -1,0 +1,331 @@
+.app-layout {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.app-layout.dark {
+  background-color: #0f172a;
+}
+
+.app-layout.pink {
+  background-color: #fff0f6;
+}
+
+/* 精致的导航栏 */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  padding: 0 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 80px;
+  transition: all 0.4s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .app-header {
+  background: rgba(30, 41, 59, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pink .app-header {
+  background: rgba(255, 240, 246, 0.8);
+  border-bottom: 1px solid rgba(235, 47, 150, 0.1);
+}
+
+/* 3D 风格 Logo */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-3d-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    inset 0 2px 4px 0 rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.dark .logo-3d-container {
+  background: #1e293b;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+.pink .logo-3d-container {
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(235, 47, 150, 0.15);
+}
+
+.logo-icon {
+  font-size: 28px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.2));
+}
+
+.pink .logo-icon {
+  background: linear-gradient(135deg, #ff85c0 0%, #eb2f96 100%);
+  filter: drop-shadow(0 2px 4px rgba(235, 47, 150, 0.2));
+}
+
+.logo-text {
+  margin: 0 !important;
+  background: linear-gradient(to right, #1e293b, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800 !important;
+}
+
+.dark .logo-text {
+  background: linear-gradient(to right, #f1f5f9, #60a5fa);
+}
+
+.pink .logo-text {
+  background: linear-gradient(to right, #eb2f96, #ff85c0);
+}
+
+/* 现代搜索框 */
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+}
+
+.search-input {
+  width: 100%;
+  border-radius: 14px !important;
+  background: #f1f5f9 !important;
+  border: 1px solid transparent !important;
+  height: 44px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-input:hover, .search-input:focus {
+  background: #fff !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.08);
+}
+
+.dark .search-input {
+  background: #1e293b !important;
+}
+
+.dark .search-input:hover, .dark .search-input:focus {
+  background: #334155 !important;
+}
+
+.pink .search-input {
+  background: #fff7fa !important;
+}
+
+.pink .search-input:hover, .pink .search-input:focus {
+  border-color: #eb2f96 !important;
+  box-shadow: 0 4px 12px rgba(235, 47, 150, 0.08);
+}
+
+/* 精致的卡片 */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.note-card {
+  border-radius: 20px !important;
+  background: #ffffff !important;
+  border: 1px solid #f1f5f9 !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  overflow: hidden;
+}
+
+.dark .note-card {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+.pink .note-card {
+  border-color: #fff0f6 !important;
+}
+
+.note-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06) !important;
+  border-color: #3b82f6 !important;
+}
+
+.dark .note-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+.pink .note-card:hover {
+  border-color: #eb2f96 !important;
+  box-shadow: 0 20px 40px rgba(235, 47, 150, 0.1) !important;
+}
+
+/* 3D 图标按钮 */
+.ant-card-actions {
+  background: transparent !important;
+  border-top: 1px solid #f1f5f9 !important;
+}
+
+.dark .ant-card-actions {
+  border-top-color: #334155 !important;
+}
+
+.pink .ant-card-actions {
+  border-top-color: #fff0f6 !important;
+}
+
+.ant-card-actions > li {
+  margin: 12px 0 !important;
+}
+
+.ant-card-actions span[role="img"] {
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant-card-actions .anticon-edit:hover {
+  color: #3b82f6;
+  background: #eff6ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.15);
+}
+
+.pink .ant-card-actions .anticon-edit:hover {
+  color: #eb2f96;
+  background: #fff0f6;
+  box-shadow: 0 4px 10px rgba(235, 47, 150, 0.15);
+}
+
+.ant-card-actions .anticon-delete:hover {
+  color: #ef4444;
+  background: #fef2f2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.15);
+}
+
+.dark .ant-card-actions .anticon-edit:hover {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.dark .ant-card-actions .anticon-delete:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+/* 浮动按钮 3D 效果 */
+.ant-float-btn-primary .ant-float-btn-body {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.pink .ant-float-btn-primary .ant-float-btn-body {
+  background: linear-gradient(135deg, #ff85c0 0%, #eb2f96 100%) !important;
+  box-shadow: 0 8px 20px rgba(235, 47, 150, 0.3) !important;
+}
+
+.ant-float-btn-primary .ant-float-btn-body:hover {
+  transform: scale(1.1) rotate(90deg);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.4) !important;
+}
+
+.pink .ant-float-btn-primary .ant-float-btn-body:hover {
+  box-shadow: 0 12px 28px rgba(235, 47, 150, 0.4) !important;
+}
+
+/* 沉浸式编辑器 */
+.modal-editor {
+  padding: 20px 0;
+}
+
+.note-date {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.note-date span[role="img"] {
+  color: #3b82f6;
+  filter: drop-shadow(0 2px 4px rgba(59, 130, 246, 0.2));
+}
+
+.pink .note-date span[role="img"] {
+  color: #eb2f96;
+  filter: drop-shadow(0 2px 4px rgba(235, 47, 150, 0.2));
+}
+
+.note-preview {
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.dark .note-preview {
+  color: #94a3b8;
+}
+
+.pink .note-preview {
+  color: #d46b9a;
+}
+
+/* 模式切换开关精致化 */
+.ant-segmented {
+  background: rgba(0, 0, 0, 0.04);
+  padding: 4px;
+  border-radius: 12px;
+}
+
+.dark .ant-segmented {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.pink .ant-segmented {
+  background: rgba(235, 47, 150, 0.05);
+}
+
+.ant-segmented-item-selected {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* 标题样式 */
+.ant-typography h3, .ant-typography h4, .ant-typography h5 {
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+}
+
+.dark .ant-typography {
+  color: #f1f5f9 !important;
+}
+
+.pink .ant-typography {
+  color: #9e1068 !important;
+}
