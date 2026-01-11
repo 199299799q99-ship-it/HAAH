@@ -28,7 +28,7 @@ NoteFlow 是一款基于 React 和 Ant Design 构建的轻量级笔记应用，�
 
 ## (c) 技术栈详情 (Technology Stack)
 
-*   **语言**: JavaScript (ES6+)，充分利用现代语法特性。
+*   **语言**: JavaScript (ES6+)，充分利用现代语法特性。sdsdfvssdfss
 *   **核心框架**: [React 18.2](https://react.dev/) - 用于构建声明式的 UI。
 *   **UI 库**: [Ant Design 6.1](https://ant.design/) - 提供了丰富的企业级 UI 组件和完善的主题定制能力。
 *   **构建工具**: [Vite 5.1](https://vitejs.dev/) - 下一代前端构建工具，提供极速的热模块替换 (HMR)。
